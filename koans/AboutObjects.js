@@ -8,11 +8,11 @@ describe("About Objects", function () {
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe("Joker");
+      expect(megalomaniac.mastermind).toBe('Joker');
     });
 
     it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe("Harley");
+      expect(megalomaniac.henchwoman).toBe('Harley');
       expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
@@ -29,7 +29,7 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect("They are Pinky and the Brain Brain Brain Brain Brain").toMatch(battleCry);
+    expect(battleCry).toMatch('They are Pinky and the Brain Brain Brain Brain');
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -97,13 +97,13 @@ describe("About Objects", function () {
       colouredCircle.colour = "red";
 
       expect(simpleCircle.colour).toBe(undefined);
-      expect(colouredCircle.colour).toBe("red");
+      expect(colouredCircle.colour).toBe('red');
 
       Circle.prototype.describe = function () {
         return "This circle has a radius of: " + this.radius;
       };
 
-      expect(simpleCircle.describe()).toBe("This circle has a radius of: 10");
-      expect(colouredCircle.describe()).toBe("This circle has a radius of: 5") ;
+      expect(simpleCircle.describe()).toBe('This circle has a radius of: 10');
+      expect(colouredCircle.describe()).toBe('This circle has a radius of: 5'); 
   });
 });
